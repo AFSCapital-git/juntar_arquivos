@@ -29,7 +29,7 @@ if uploaded_files:
         def on_progress(current: int, total: int, name: str) -> None:
             progress_bar.progress(current / total, text=f"Processando {current}/{total}…")
 
-        raw_file_map = {name: file_map[name].read() for name in order}
+        raw_file_map = {name: file_map[name] for name in order}
 
         builder = PdfBuilder()
         result = builder.build(raw_file_map, order, progress_callback=on_progress)
