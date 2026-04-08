@@ -20,3 +20,7 @@ build/
 
 # Output files
 *.pdf
+
+# Bash
+*.sh
+*.log
